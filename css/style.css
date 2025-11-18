@@ -1,0 +1,243 @@
+@import url(./minimo.css);
+
+html, body {
+    width: 100vw;
+    max-width: 960px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: salmon;
+    font-variant: small-caps;
+}
+
+header #btnMenuContainer {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+header #btnMenuContainer:hover {
+    rotate: 180deg;
+    width: 2rem;
+    height: 2rem;
+}
+
+header #btnMenuContainer .btnMenuIconBar {
+    height: 0.5rem;
+    background-color: salmon;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+nav {
+    padding: 0.5rem;
+    background-color: salmon;
+}
+
+nav ul li {
+    padding: 0.5rem;
+    border-bottom: 1px solid white;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    color: salmon;
+    background-color: white;
+}
+
+nav ul li a:hover {
+    color: salmon;
+}
+
+main {
+    width: 100%;
+}
+
+main section {
+    margin: 1rem;
+}
+
+main section div.toUp {
+    padding: 1rem;
+    text-align: right;
+}
+
+main section div.toUp a icon {
+    font-size: 2rem;
+    color: salmon;
+    transition: 0.5s;
+}
+
+main section div.toUp a icon:hover {
+    color: black;
+}
+
+main section h2 {
+    font-size: 2rem;
+    margin:  1rem 0;
+    color: salmon;
+}
+
+main section article {
+    width: 100%;
+}
+
+main section article p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: darkgrey;
+}
+
+main section article figure.newsFig {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+main section article figure.newsFig img {
+    width: 100%;
+}
+
+main section article figure.newsFig figcaption {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+main section form {
+    background-color: salmon;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+main section form div.formDiv {
+    margin:  1rem 0;
+}
+
+main section form div.formDiv label {
+    text-transform: uppercase;
+    color: white;
+}
+
+main section form div.formDiv input,
+main section form div.formDiv textarea {
+    margin-top: 0.5rem;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: lightsalmon;
+    width: 100%;
+    transition: 0.5s;
+}
+
+main section form div.formDiv input:focus,
+main section form div.formDiv textarea:focus {
+    background-color: darksalmon;
+}
+
+main section form div.formDiv button {
+    width: 100%;
+    background-color: black;
+    color: salmon;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+
+main section form div.formDiv button:hover {
+    background-color: whitesmoke;
+}
+
+footer {
+    background-color: black;
+    padding: 3rem 1rem;
+    color: salmon;
+}
+
+footer address {
+    font-variant: small-caps;
+    font-style: normal;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+footer address a {
+    color:  lightsalmon;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+footer address a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/*ESTILO A PARTIR DE 480 PIXELS DE LARGURA*/
+
+@media (min-width: 480px) {
+    .invisible {
+        display: block;
+    }
+
+    header #btnMenuContainer {
+        display: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+        border-bottom: none;
+    }
+
+    main section article {
+        column-count: 2;
+        column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main section article {
+        column-count: 3;
+    }
+}
+
