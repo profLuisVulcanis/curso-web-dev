@@ -7,6 +7,8 @@ html, body {
     overflow-x: hidden;
 }
 
+/* INICIO DO HEADER */
+
 header {
     padding: 2rem;
     display: flex;
@@ -34,7 +36,7 @@ header #btnMenuContainer {
 
 header #btnMenuContainer:hover {
     rotate: 180deg;
-    width: 2rem;
+    width:  2rem;
     height: 2rem;
 }
 
@@ -43,13 +45,7 @@ header #btnMenuContainer .btnMenuIconBar {
     background-color: salmon;
 }
 
-.invisible {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
+/* INICIO DO MENU */
 
 nav {
     padding: 0.5rem;
@@ -67,19 +63,29 @@ nav ul li {
     transition: 0.5s;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
 nav ul li:hover {
     color: salmon;
     background-color: white;
 }
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 nav ul li a:hover {
     color: salmon;
 }
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* INÍCIO DO MAIN */
 
 main {
     width: 100%;
@@ -89,24 +95,9 @@ main section {
     margin: 1rem;
 }
 
-main section div.toUp {
-    padding: 1rem;
-    text-align: right;
-}
-
-main section div.toUp a icon {
-    font-size: 2rem;
-    color: salmon;
-    transition: 0.5s;
-}
-
-main section div.toUp a icon:hover {
-    color: black;
-}
-
 main section h2 {
     font-size: 2rem;
-    margin:  1rem 0;
+    margin: 1rem 0;
     color: salmon;
 }
 
@@ -120,46 +111,45 @@ main section article p {
     color: darkgrey;
 }
 
-main section article figure.newsFig {
+main section article figure {
     position: relative;
     width: 100%;
     margin-bottom: 1rem;
 }
 
-main section article figure.newsFig img {
+main section article figure img {
     width: 100%;
 }
 
-main section article figure.newsFig figcaption {
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.5rem;
-    border: 1px solid white;
-    border-radius: 0.5rem;
+main section article figure figcaption {
     position: absolute;
     left: 10px;
     right: 10px;
     bottom: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
 }
 
 main section form {
-    background-color: salmon;
+    background-color:  salmon;
     padding: 1rem;
     border-radius: 0.5rem;
 }
 
-main section form div.formDiv {
-    margin:  1rem 0;
+main section form div {
+    margin: 1rem 0;
 }
 
-main section form div.formDiv label {
+main section form div label {
     text-transform: uppercase;
     color: white;
 }
 
-main section form div.formDiv input,
-main section form div.formDiv textarea {
+main section form div input,
+main section form div textarea {
     margin-top: 0.5rem;
     border: 1px solid white;
     padding: 0.5rem;
@@ -169,12 +159,12 @@ main section form div.formDiv textarea {
     transition: 0.5s;
 }
 
-main section form div.formDiv input:focus,
-main section form div.formDiv textarea:focus {
+main section form div input:focus,
+main section form div textarea:focus {
     background-color: darksalmon;
 }
 
-main section form div.formDiv button {
+main section form div button {
     width: 100%;
     background-color: black;
     color: salmon;
@@ -185,9 +175,26 @@ main section form div.formDiv button {
     transition: 0.5s;
 }
 
-main section form div.formDiv button:hover {
-    background-color: whitesmoke;
+main section form div button:hover {
+    background-color: white;
 }
+
+main section div.toUp {
+    padding: 1rem;
+    text-align: right;
+}
+
+main section div.toUp span {
+    font-size: 2rem;
+    color: salmon;
+    transition: 0.5s;
+}
+
+main section div.toUp span:hover {
+    color: black;
+}
+
+/*INÍCIO DO RODAPÉ - FOOTER*/
 
 footer {
     background-color: black;
@@ -203,7 +210,7 @@ footer address {
 }
 
 footer address a {
-    color:  lightsalmon;
+    color: lightsalmon;
     font-weight: bold;
     transition: 0.5s;
 }
@@ -213,7 +220,7 @@ footer address a:hover {
     text-decoration: none;
 }
 
-/*ESTILO A PARTIR DE 480 PIXELS DE LARGURA*/
+/*CONFIGURAÇÃO ACIMA DE 480 PIXELS DE LARGURA*/
 
 @media (min-width: 480px) {
     .invisible {
@@ -240,4 +247,3 @@ footer address a:hover {
         column-count: 3;
     }
 }
-

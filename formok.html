@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obrigado por entrar em contato!</title>
+    <title>Obrigado por entrar em contato...</title>
     <link rel="stylesheet" href="./css/style.css">
     <style>
         .formOkDiv {
@@ -12,7 +12,7 @@
             align-items: center;
             justify-content: center;
         }
-        .formOkAnchor {
+        .formOkLink {
             background-color: salmon;
             padding: 2rem;
             font-size: 2rem;
@@ -21,36 +21,52 @@
             font-variant: small-caps;
             border-radius: 1rem;
             transition: 0.5s;
-        }
-        .formOkAnchor:hover {
+        } 
+        .formOkLink:hover {
             background-color: black;
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <header id="home">
         <h1>3 Bandas</h1>
+        <div id="btnMenuContainer">
+            <div class="btnMenuIconBar"></div>
+            <div class="btnMenuIconBar"></div>
+            <div class="btnMenuIconBar"></div>
+        </div>
     </header>
+
+    <nav id="mainMenu" class="invisible">
+        <ul>
+            <li><a href="index.html#home" title="Ir para a Home">Início</a></li>
+            <li><a href="index.html#about" title="Sobre o Site">Sobre</a></li>
+            <li><a href="index.html#news" title="Últimas bandas">Novidades</a></li>
+            <li><a href="index.html#contact" title="Fale com a gente">Contato</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section id="formReturn">
-            <h2>Obrigado por entrar em contato</h2>
+            <h2>Obrigado por entrar em contato...</h2>
             <article>
-                <p>Em breve iremos entrar em contato para responder as suas dúvidas.</p>
-                <p>Clique no botão abaixo para retornar a página inicial e continuar navegando em nosso site.</p>
+                <p>Em breve entraremos em contato através do e-mail informado</p>
+                <p>Clique no botão abaixo para retornar a HOME ou utilize o menu e continue navegando.</p>
             </article>
             <div class="formOkDiv">
-                <a href="./index.html" class="formOkAnchor" title="Voltar a Página Incial">Voltar a Home</a>
+                <a href="./index.html" class="formOkLink" title="Voltar a Home Page">Voltar...</a>
             </div>
         </section>
     </main>
 
     <footer>
         <address>
-            Desenvolvido por: <a href="mailto:contato@servico.com">Luis Vulcanis</a> para o Curso de Desenvolvimento Wen &copy; 2025.
+            Desenvolvido por <a href="mailto:seuemail@provedor.com"> Luis A. Vulcanis </a> para Curso de Desenvolvimento Web &copy; 2026, do Canal Tempor Esquisitos.
         </address>
     </footer>
+
+    <script src="./js/scripts.js"></script>
     
 </body>
 </html>

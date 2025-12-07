@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('mainMenu')
     const navItems = document.querySelectorAll('nav li')
 
-    if (btnMenu && navMenu && navItems.length > 0) {
+     if (btnMenu && navMenu && navItems.length > 0) {
 
         btnMenu.addEventListener('click', function() {
             navMenu.classList.toggle('visible')
@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Erro: Um ou mais elementos necessários (btnMenuContainer, nav ou nav li) não foram encontrados no DOM")
     }
-
 })
+
