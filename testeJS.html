@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JS</title>
+    <style>
+        html, body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            color: blueviolet;
+        }
+
+        div {
+            margin: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Como Utilizar o Javascript</h1>
+    </header>
+
+    <div id="ex1">
+        <h2>Exemplo Inline</h2>
+        <p>
+            <button onclick="alert('Você clicou no botão do exemplo 1')">Clique Aqui</button>
+        </p>
+    </div>
+
+    <div id="ex2">
+        <h2 id="tituloDois">Exemplo Interno</h2>
+        <p>
+            <button id="btnDois">Clique Aqui!</button>
+        </p>
+    </div>
+
+    <div id="ex3">
+        <h2>Exemplo Externo</h2>
+        <p>
+            <button id="btnTres">Clique Aqui!</button>
+        </p>
+    </div>
+
+    <script>
+        let btn2 = document.getElementById('btnDois')
+        let tit2 = document.getElementById('tituloDois')
+
+        btn2.addEventListener('click', function() {
+            tit2.innerText = "Este título foi alterado utilizando JavaScript embutido no HTML"
+        })
+    </script>
+    
+    <script src="./testeJS.js"></script>
+
+</body>
+</html>
