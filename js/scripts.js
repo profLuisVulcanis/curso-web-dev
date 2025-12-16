@@ -27,5 +27,42 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Erro: Um ou mais elementos necessários (btnMenuContainer, nav ou nav li) não foram encontrados no DOM")
     }
+
+    //Lógica da Galeria
+
+    const galleryLinks = document.querySelectorAll('#galleryMenuList a')
+    const galleryBand = document.getElementById('galleryBand')
+
+    function loadContent(url) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na requisição: ' + response.statusText)
+                }
+                return response.text()
+            })
+            .then(html => {
+                galleryBand.innerHTML = html
+            })
+            .catch(error => {
+                console.error('Erro ao carregar conteúdo:', error)
+                galleryBand.innerHTML = `<p>Erro ao carregar o conteúdo: ${error.message}</p>`
+            })
+    }
+
+    if (galleryLinks.length > 0 && galleryBand) {
+        // Carrega o conteúdo inicial (band1.html)
+        loadContent('./bands/band1.html');
+
+        galleryLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault()
+                const url = this.getAttribute('data-url')
+                if (url) {
+                    loadContent(url)
+                }
+            })
+        })
+    }
 })
 
