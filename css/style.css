@@ -305,3 +305,20 @@ footer address a:hover {
         column-count: 3;
     }
 }
+
+@media (max-width: 480px) {
+    #galleryMenuList {
+        list-style: none;
+        display: inline-block;
+    }
+
+    #galleryMenu #galleryMenuList li {
+        display: inline;
+        border-bottom: none;
+        margin-right: 0.5rem;
+    }
+    #galleryMenu #galleryMenuList li a img {
+        width: 64px;
+        height: 64px;
+    }
+}
